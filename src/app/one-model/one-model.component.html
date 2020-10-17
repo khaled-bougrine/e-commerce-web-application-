@@ -1,0 +1,45 @@
+ <div style="display: flex;    flex-wrap: wrap; padding-top: 20px;
+" >
+  <b class="badge  badge-light" *ngIf="model.isnew" > New</b> 
+                     <b class="badge  badge-light "*ngIf="model.solde!=0" > -{{model.solde}}%</b> 
+                        <b class="badge  badge-light"  *ngIf="model.isbestsell"> best Sell</b> </div>
+                        <div *ngIf="retrievedImage[j]" >
+                            <img  (mouseenter)="mouseEnter()"  (mouseleave)="mouseOute()" class="dark"  [src]="retrievedImage[j]"style=" width: 250px;height:350px ;border-radius: 8px; ">
+                        </div>
+             
+               <a href=""> <h6  style="color: #232f3e ;font-family: 'Acme', sans-serif; display: flex;     flex-wrap: wrap;
+">{{model.description}}</h6></a>
+                <a href=""> <h6 style="color: #232f3e ;font-family: 'Acme', sans-serif; ">{{model.modele}}</h6></a>
+                <a href=""> <h6 style="color: #232f3e ;font-family: 'Acme', sans-serif; ">{{model.colore}}</h6></a>
+            <div class="row">
+               <img  src="assets/66.jpg" class="col-4"  style="width:20px ;height: 20px;">
+            </div>
+         
+            
+ <div class="row">
+   <div class="col-8">  <div class="row" style="margin-left: 4px;">
+            <h4 >{{model.price-(model.solde*model.price)/100}}DT</h4>
+            <b style="text-decoration:line-through;font-family: 'Acme', sans-serif;
+font-family: 'Dancing Script', cursive; font-size: 15px; padding-top: 5px;" *ngIf="model.solde!=0">{{model.price}}DT</b>
+            </div>
+            <b  *ngIf="model.solde!=0" class="badge  badge-danger">save {{(model.solde*model.price)/100}} DT</b>
+</div>
+
+   <div class="col-4 "style="display: flex;flex-direction: column; justify-content: flex-end;" (mouseenter)="lovehoverin()"(mouseleave)="lovehoverout()" >
+     <img class="ingg" style="padding-right: 5px; width: 48px;height: 48px;cursor: pointer;"  [src]="loveimg" (click)="love()"/>
+    <h  [ngClass]="lovehover" >
+    favorite</h>
+   
+   
+</div>
+</div>
+<style type="text/css">
+  .love{
+   font-size:8px; color: #ff0000;padding-left: 5px;
+   visibility: 1;
+  }
+  .nelovepas{
+    font-size:8px; color: #ff0000;padding-left: 5px;
+    visibility: hidden;
+  }
+</style>

@@ -1,0 +1,42 @@
+ <div style="display:flex;justify-content: space-between;border-bottom:1px #ccc solid;">
+ 	
+ 
+
+        <div style="display: flex;justify-content: center; flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:25px; border-bottom: 1px #d2cdc9 solid ; "> Lié au ce produit N:{{index+1}}</b>
+
+    <b class="" style="color: #8b8b8b; font-family: 'Acme', sans-serif; font-size:16px; ">clicker  sur un  model pour ajouter a voter collection </b>
+  
+
+</div>
+
+    
+  
+
+
+ 
+ <img [src]="retrievedImage" style="width: 50px;height: 70px"> 
+</div>
+
+
+<div  style="display: flex; justify-content: space-between; padding-top: 10px;margin-bottom: 20px;" >
+
+<button (click)="previes()" [disabled]="d==0" style="margin-top: auto;margin-bottom: auto;display: block; "type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: auto;margin-bottom: auto;">&laquo;</b>
+</button>
+
+	<div style="display: flex;flex-wrap: wrap;" >
+	
+	<app-product2   *ngFor="let pro of list" [product]="pro" (click)="change(index,pro)"></app-product2>
+	
+</div>
+<button  [disabled]="f===list.length" (click)="next()" style="margin-top: auto;margin-bottom: auto;display: block; "type="button" class=" btn btn-light"><b style="font-family: 'Open Sans Condensed', sans-serif;   font-size: 28px;margin-top: 50px;">&raquo;</b>
+</button>
+	
+</div>
+<style type="text/css">
+	 .test2::first-letter {
+                color: #8b8b8b; 
+                size: 20;
+                
+                
+</style>
