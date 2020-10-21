@@ -102,9 +102,9 @@ export class  ModelService{
 
 	  }
 	  //-=======================getModelsByUtilisation==============-
-	  getModelsByUtilisation(id1:string ,id2:string):Observable<Model[]>{
+	  getModelsByUtilisation(id1:string ,id2:string):Observable<any[]>{
 
-	     return this.httpClient.get< Model[]>('http://localhost:8080/get/'+id1+'/'+id2)
+	     return this.httpClient.get< any[]>('http://localhost:8080/get/'+id1+'/'+id2)
       
 	  }
 	  //=====================get PAR NBSERIE===============
@@ -136,29 +136,10 @@ export class  ModelService{
 
 	  Filter(min,max,colore,modele,list1:Model[]):any[]{
 	 
-		/*
+		
 
 	  	
-	  	if(colore!=null){
-	  	console.log(colore)
-	  	
-	  		  	var n=list1.length;
-	  	do {
-	  		console.log(n);
-	  		n=n-1;
-	  		var model =this.list1.pop()
-	  		if(this.testlist(model.colore,colore)){
-	  			this.list1.push(model);
-
-	  		}
-	  		// code...
-	  	} while (n>0);
-	  	
-	  		
-	  		
-	  	  list1=list1.filter(rest=>{   return rest.colore===colore})
-	  			console.log(this.list1)
-	  	}
+	 
 
    
       if (min!=null){
@@ -171,7 +152,7 @@ export class  ModelService{
   	list1= list1.filter(rest=>{   return rest.modele===modele;})
 
   }
-  */
+  
   return list1;
 
       }

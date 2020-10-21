@@ -25,6 +25,7 @@ import { ToutlesModelComponent } from './toutles-model/toutles-model.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigComponent } from './config/config.component';
+import { UpdateModelComponent } from './update-model/update-model.component';
 
 
 
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   { path:'tout/:id1/:id2',component:ToutsComponent},
    {path:"",component:HomeComponent},
    {path:'add/:model',component:AddModelComponent},
+   {path:'update/:id1/:id2' ,component:UpdateModelComponent},
    {path:"toutlesmodel",component:ToutlesModelComponent},
    {path:"login",component:LoginComponent}
   ]
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     AddModelComponent,
     ToutlesModelComponent,
     LoginComponent,
-    ConfigComponent
+    ConfigComponent,
+    UpdateModelComponent
    
   ],
   imports: [

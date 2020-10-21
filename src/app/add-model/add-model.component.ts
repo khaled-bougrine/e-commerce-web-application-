@@ -19,6 +19,8 @@ export class AddModelComponent implements OnInit {
 	selectedFile:File;
 	url:string;
   model:String;
+  modelList:string[];
+  coloreList:string[];
 
 	listOfimage:String[]=[];
 
@@ -48,6 +50,7 @@ export class AddModelComponent implements OnInit {
 }
 
   ngOnInit(): void {
+    
      this.model = this.route.snapshot.params['model'];
 
      if(this.model==='tissus'){
@@ -117,6 +120,17 @@ export class AddModelComponent implements OnInit {
     );
 
      }
+     if(this.model==='tissus'){
+        this.userForm.get("fabric").valueChanges
+      .subscribe(f => {
+        console.log(f);
+       this.modelList= this.configservice.getmodelTissus(f)
+       this.coloreList=this.configservice.getColoreTissus(f);
+
+
+
+      })
+    }
   	    
   }
   onSubmitForm(){
@@ -195,6 +209,8 @@ export class AddModelComponent implements OnInit {
        console.log(model);
      this.service.postModel(model);}
   }
+
+
 
   getComposant(): FormArray {
     return this.userForm.get('composants') as FormArray;

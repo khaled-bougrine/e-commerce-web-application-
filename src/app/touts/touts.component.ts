@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModelService } from '../service/Model.service';
 import { ConfigService } from '../service/Config.service'
 import { Model } from '../models/Model.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -11,6 +11,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./touts.component.css']
 })
 export class ToutsComponent implements OnInit {
+  //testColore='Aquamarine';
   ischecked=false;
 	min:number=null;
    max:number=null;
@@ -19,6 +20,7 @@ export class ToutsComponent implements OnInit {
    id1:string;id2:string;
    nul=null;
     modelTissus:string[];
+    coloreTissus:string[];
   list:Model[];
   list1:Model[];
 
@@ -27,7 +29,7 @@ export class ToutsComponent implements OnInit {
 
 
 
-  constructor( public service: ModelService, private fb:FormBuilder,private route:ActivatedRoute ,public sreviceConfig:ConfigService) { 
+  constructor( public service: ModelService, private fb:FormBuilder,private route:ActivatedRoute ,public sreviceConfig:ConfigService,public router:Router) { 
 
          
   }
@@ -38,7 +40,8 @@ export class ToutsComponent implements OnInit {
           this.id2 = this.route.snapshot.params['id2'];
           console.log(this.sreviceConfig.modelTissue.cotton)
           if(this.id1==='tissus'){
-          this.modelTissus=this.sreviceConfig.getmodelTissus(this.id2)
+                this.modelTissus=this.sreviceConfig.getmodelTissus(this.id2)
+                this.coloreTissus=this.sreviceConfig.getColoreTissus(this.id2)
             
 
           }
@@ -155,6 +158,14 @@ export class ToutsComponent implements OnInit {
     this.list=this.service.Filter(this.min,this.max,this.colore,this.modele,this.list1);
 
 
+  }
+  fabricChange(fabric:string){
+    this.router.navigate(['/tout/tissus/'+fabric]).then(()=>{
+       this.ngOnInit();
+
+    })
+
+   
   }
 
   

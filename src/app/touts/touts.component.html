@@ -73,6 +73,12 @@ s
 </div>
 </form>
 <style type="text/css">
+  .test2::first-letter {
+                color: #8b8b8b; 
+                size: 35;
+                
+                
+              }
     @media screen and (max-width: 820px)
               {
                   .kbir
@@ -102,33 +108,41 @@ s
 
       <div  *ngIf="id1 ==='tissus'"class="col-2 kbir" style="border-right: 0.5px #d2cdc9 solid ;">
           <div style="display: flex;justify-content: center; flex-direction: column;">
-    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:20px; border-bottom: 1px #d2cdc9 solid ; "> Curtain fabrilc</b>
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:30px; border-bottom: 1px #d2cdc9 solid ; margin-top: 15px;margin-bottom: 15px;"> Curtain fabric</b>
 
   
 
 </div>
-                                 <div *ngFor="let model of sreviceConfig.fabricList" class=" filter container-fluid" >
+<div class="radio" >
+                                 <div style="margin-left: 15px;" *ngFor="let model of sreviceConfig.fabricList" class=" filter container-fluid" >
+                    <label style="font-family: 'Acme', sans-serif;">{{model}}
+                    <input  type="radio" name="fabric" (change)="fabricChange(model)" style="opacity: 0; height: 0;width: 0;display: none;">
+                    <span class="check"></span>
+                    </label>
+                  </div>
+                </div>
+                    
+                     
+                 
+          <div style="display: flex;justify-content: center; flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:30px; border-bottom: 1px #d2cdc9 solid ; margin-top: 15px;margin-bottom: 15px;">Modele</b>
+
+  
+
+</div>
+        <div class="radio" >
+
+                                 <div style="margin-left: 15px;" *ngFor="let model of modelTissus" class=" filter container-fluid" >
                     <label style="font-family: 'Acme', sans-serif;">{{model}}
                     <input  type="radio" name="Modèle"  (change)="price(30,40)" style="opacity: 0; height: 0;width: 0;display: none;">
                     <span class="check"></span>
                     </label>
                   </div>
                     
-                     
-                  <div>
-                    <img src="assets/naehzubehoer_massband.svg">
-                  </div>
-
-        <div class="radio" style="margin-top: 50px;">
-                  <b style="font-family: 'Acme', sans-serif; font-size: 23px; padding-left: auto; color:#232f3e  ">Modele</b>
+               
                      
                   
-                      <div *ngFor="let modeltissus of modelTissus" class=" filter"style="display: flex;justify-content: center;" >
-                  <label style="font-family: 'Acme', sans-serif;">{{modeltissus}}
-                    <input (change)="modelfilter($event.target.value)"    type="radio" name="Modèle"   style="opacity: 0; height: 0;width: 0;display: none;" [value]="modeltissus">
-                    <span class="check"></span>
-                    </label>
-                  </div>
+                  
                                 <div class=" filter" style="display: flex;justify-content: center;">
                   <label style="font-family: 'Acme', sans-serif;">~~tous~~
                     <input  type="radio"  checked="checked" name="Modèle"  (change)="allModel()" style="opacity: 0; height: 0;width: 0;display: none;">
@@ -137,11 +151,17 @@ s
                   </div>
                 </div>
                  <div class="radio">
-                  <img src="assets/reststuecke.svg">
-                 <b style="font-family: 'Acme', sans-serif; font-size: 23px; padding-left: 16PX; color:#232f3e  ">prix</b>
                  
-                  
-                    <div class=" filter container-fluid" >
+                     <div style="display: flex;justify-content: center; flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:30px; border-bottom: 1px #d2cdc9 solid ; margin-top: 15px;margin-bottom: 15px;">Prix   <img src="assets/reststuecke.svg" style="width: 40px ;height: 40px;margin-bottom: 10px;" >
+                   </b>
+
+  
+
+</div>
+
+               
+                    <div class=" filter container-fluid"  >
                   <label style="font-family: 'Acme', sans-serif;">Under 20 DT
                     <input  type="radio" name="Price"  (change)="price(0,20)" style="opacity: 0; height: 0;width: 0;display: none;">
                     <span class="check"></span>
@@ -197,9 +217,12 @@ s
                     
                     
                   }
+                  .filter {
+                    margin-left: 20px;
+                  }
 .check {
   position: absolute;
-  left: 0;
+  left: 10px;
   height: 20px;
   width: 20px;
   padding-left: 3px;
@@ -214,63 +237,39 @@ s
 
                   
                   
-                  
+                  <div class="test2" >
                      
-                        <b style="font-family: 'Acme', sans-serif; font-size: 23px; padding-left: 30px; color:#232f3e;  ">color</b><br>
+                        <b style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:30px; border-bottom: 1px #d2cdc9 solid ; margin-top: 15px;margin-bottom: 15px;"> Couleur <img src="assets/color-wheel.png" style="width: 30px;height: 30px;margin-bottom: 10px;"></b>
+                        </div>
+<br>
                              <div class=" radio row " > 
-                        <label class="container col-2 ">
+                        <label class="container col-2 " *ngFor="let color of coloreTissus">
                         <input type="radio" value="red"name="color" (change)="colors($event.target.value)">
-                         <span class="checkmark" style="  background-color: #ff0000; border: 3px #ffffff solid;" ></span>
+                         <span class="checkmark"  [ngStyle]="{'background-color': color}" ></span>
                            </label>
 
-                             <label class="container col-2 ">
-                         <input type="radio" value="green"name="color" (change)="colors($event.target.value)">
-                         <span class="checkmark" style="  background-color: #00ff00;border: 3px #ffffff solid;" ></span>
-                           </label>
-                                  <label class="container col-2 ">
-                         <input type="radio" value="green"name="color" (change)="colors($event.target.value)">
-                         <span class="checkmark" style="  background-color: #00ff00;border: 3px #ffffff solid;" ></span>
-                           </label>
-                                  <label class="container col-2 ">
-                         <input type="radio" value="green"name="color" (change)="colors($event.target.value)">
-                         <span class="checkmark" style="  background-color: #00ff00;border: 3px #ffffff solid;" ></span>
-                           </label>
 
-                             <label class="container col-2 ">
-                         <input type="radio" value="blue"name="color" (change)="colors($event.target.value)">
-                         <span class="checkmark" style="  background-color: #0000ff; border: 3px #ffffff solid;" ></span>
-                           </label>
 
                            </div>
-                           <div class="row" style="height: 20;"> </div>
-                                   <div class="row" style="margin-top: 25;"> 
-                        <label class="container col-4 ">
-                        <input type="radio" name="color">
-                         <span class="checkmark" style="  background-color: #ffffff;" ></span>
-                           </label>
+                           
+                           <div style="height: 300px;">
+                                     <div style="display: flex;justify-content: center; flex-direction: column;">
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:30px; border-bottom: 1px #d2cdc9 solid ; margin-top: 15px;margin-bottom: 15px;">Length</b>
 
-                             <label class="container col-4">
-                        <input type="radio" name="color">
-                         <span class="checkmark" style="  background-color: #000000;" ></span>
-                           </label>
+  
 
-                             <label class="container col-4 ">
-                        <input type="radio"  name="color">
-                         <span class="checkmark" style="  background-color: #f1c92a;" ></span>
-                           </label>
-
+</div>
+                            <input type="number" min="0" name="" style="width: 50%; height: 30px;">
+                            <button type="sub"></button>
                            </div>
+
+                            
                                  
    
                 </div>
                     
                                        <style type="text/css">
-             .test2::first-letter {
-                color: #8b8b8b; 
-                size: 25;
-                
-                
-              }
+             
                                
 .container {
   display: block;
@@ -352,7 +351,7 @@ s
                 
 <div style="display: flex;justify-content: center;  ;">
   <div style="display: flex;justify-content: center;flex-direction: column;">
-    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:35px; border-bottom: 1px #6a4532 solid;padding-top: 50px; "> Faites votre collection pour votre rideau </b>
+    <b class="test2" style="color: #2e3d5c; font-family: 'Acme', sans-serif; font-size:35px; border-bottom: 1px #d2cdc9 solid;padding-top: 50px; "> Faites votre collection pour votre rideau </b>
 
  
  
@@ -365,6 +364,7 @@ s
     <img src="assets/diy_logo.svg" style="width: 30px;height: 30px;">
 
   </div>
+
 
 </div>
   
