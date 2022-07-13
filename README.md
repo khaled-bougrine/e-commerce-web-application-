@@ -2,7 +2,7 @@
 
 
 
-![Tux, the Linux mascot](/assets/images/148077708_1059241784587941_3571232726634073855_n.png)
+![Tux, the Linux mascot](src/assets/images/148077708_1059241784587941_3571232726634073855_n.png)
 
 
 
