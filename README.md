@@ -1,8 +1,34 @@
+# E-commerce web application Angular
+Ce projet est une application microservice avec une combinaison de Spring Boot, Angular et Mysql. 
+    ![Tux, the Linux mascot](/src/assets/readme6.png)
+
+
+## Angular
+Angular is a JavaScript framework that allows you to create "efficient and sophisticated" applications, as the documentation says. In particular, it allows you to create what are called Single Page Applications (or SPA): entire applications that run in a single HTML 
+##### The Angular framework is based on HTML, SCSS and TypeScript.
+   - The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser
+   - Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
+    - TypeScript for everything dynamic, behavior and data - a bit like JavaScript on a site without a framework.
+    
+    
+   
+
+# The graphical interfaces designed in this project
+
+
+![Tux, the Linux mascot](/src/assets/readme1.png)
+![Tux, the Linux mascot](/src/assets/readme2.png)
+![Tux, the Linux mascot](/src/assets/readme3.png)
+![Tux, the Linux mascot](/src/assets/readme4.png)
+![Tux, the Linux mascot](/src/assets/readme5.png)
 
 
 
 
-![Tux, the Linux mascot](/src/assets/148077708_1059241784587941_3571232726634073855_n.png)
+
+
+
+
 
 
 
