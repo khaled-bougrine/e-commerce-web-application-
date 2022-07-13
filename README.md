@@ -1,3 +1,12 @@
+
+
+
+
+![Tux, the Linux mascot](/assets/images/148077708_1059241784587941_3571232726634073855_n.png)
+
+
+
+
 # Test6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
