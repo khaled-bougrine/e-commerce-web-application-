@@ -16,6 +16,8 @@ Angular is a JavaScript framework that allows you to create "efficient and sophi
 
 
 ![Tux, the Linux mascot](/src/assets/readme1.png)
+![Tux, the Linux mascot](/src/assets/readme5.png)
+
 
 ![Tux, the Linux mascot](/src/assets/readm2.png)
 
@@ -23,7 +25,6 @@ Angular is a JavaScript framework that allows you to create "efficient and sophi
 
 ![Tux, the Linux mascot](/src/assets/readme4.png)
 
-![Tux, the Linux mascot](/src/assets/readme5.png)
 
 
 
