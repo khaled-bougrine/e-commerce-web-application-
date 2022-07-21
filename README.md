@@ -28,8 +28,6 @@ Angular is a JavaScript framework that allows you to create "efficient and sophi
 
 ![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020935.png)
 
-![Tux, the Linux mascot](/src/assets/Screenshot_20220721_021004.png)
-![Tux, the Linux mascot](/src/assets/readme2.png)
 
 ![Tux, the Linux mascot](/src/assets/readme1.png)
 
