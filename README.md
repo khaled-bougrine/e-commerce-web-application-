@@ -12,7 +12,7 @@ Angular is a JavaScript framework that allows you to create "efficient and sophi
    - TypeScript for everything dynamic, behavior and data - a bit like JavaScript on a site without a framework.
     
 
-# The graphical interfaces designed in this project
+# graphical interfaces made with HTML, CSS and Bootstrap.
 
 ![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020633.png)
 
