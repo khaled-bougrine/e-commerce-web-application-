@@ -14,14 +14,21 @@ Angular is a JavaScript framework that allows you to create "efficient and sophi
 
 # The graphical interfaces designed in this project
 
-![Tux, the Linux mascot](/src/assets/readme5.png)
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020633.png)
 
-![Tux, the Linux mascot](/src/assets/readme1.png)
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020708.png)
 
 
-![Tux, the Linux mascot](/src/assets/readm2.png)
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020743.png)
 
-![Tux, the Linux mascot](/src/assets/readme3.png)
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020827.png)
+
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020900.png)
+
+
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_020935.png)
+
+![Tux, the Linux mascot](/src/assets/Screenshot_20220721_021004.png)
 
 ![Tux, the Linux mascot](/src/assets/readme4.png)
 
